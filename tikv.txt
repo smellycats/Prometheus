@@ -1,0 +1,1 @@
+docker run -d --name tikv3-1 -p 20171:20171 --ulimit nofile=1000000:1000000 -m 12288M --memory-reservation 10240M --cpuset-cpus=6-11 -v /etc/localtime:/etc/localtime:ro -v /var/sxstorage/data1:/data -v /home/core/tikv/config1/tikv.toml:/tikv.toml:ro pingcap/tikv:v2.0.3 --addr="0.0.0.0:20171" --advertise-addr="10.47.223.69:20171" --data-dir="/data/tikv3" --config="/tikv.toml"
