@@ -1,0 +1,1 @@
+docker run -d --name node_exporter --restart=always --net=host --pid=host -m 128M --memory-reservation 100M --cpuset-cpus=0,1 -v /var/sxstorage:/var/sxstorage quay.io/prometheus/node-exporter
